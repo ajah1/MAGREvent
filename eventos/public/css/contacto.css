@@ -1,0 +1,23 @@
+
+
+#contacttitulo{
+	margin-top:15%;
+	height:100%;
+	width:100%;
+}
+
+.contact-form {
+    margin-top:70px;
+}
+
+html, body {
+  height: 100%;
+}
+ 
+body {
+  overflow: hidden;
+}
+
+p a {
+  text-decoration:transparent;
+}
