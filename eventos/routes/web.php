@@ -11,6 +11,13 @@
 |
 */
 
+/*
+    Rama copia seguridad con todo juntado (12 mayo)
+        falta css de los formularios
+        separar parte privada, publica
+        ... 
+*/
+
 Route::get('/', 'EventosController@index');
 
 Route::get('/404', function () {
