@@ -11,14 +11,11 @@
 |
 */
 
+
 Route::get('/', 'EventosController@index');
 
 Route::get('/404', function () {
     return view('404');
-});
-
-Route::get('/buscar', function () {
-    return view('buscar');
 });
 
 Route::get('/home', function () {

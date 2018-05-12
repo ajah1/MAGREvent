@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
 
-    <meta charset="utf-8" />
-    <title>Crear Usuario</title>
-    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
-    <link href="{{asset('css/createUsuario.css')}}" rel="stylesheet">
+<header>
+
+    <link href="{{asset('css/create.css')}}" rel="stylesheet">
     <link href="{{asset('css/menu.css')}}" rel="stylesheet">
 
-    </head>
+</header>
 
-    <body>
+<body>
 
     <div class="navbar">
         <a href="/">Home</a>
@@ -40,50 +36,32 @@
         </div>
     </div>
 
+
     @include('alerts.request')
+    <form class="form" action="{{route('registrar')}}" method="post">
 
-    <form action="{{route('registrar')}}" method="post">
+     {{csrf_field()}}
 
-    {{csrf_field()}}
-
-        <p class="texto">Registro Usuario</p>
-        <div class="Registro">
+        <h1>Usuario</h1>
         <form method="post" action="https://getform.org/f/70415a77-d632-4883-bf07-2e15d3f557da">
-
-        <span class="fontawesome-user"></span>
-        <input type="text" name="dni" placeholder="Dni Usuario" />
-
-        <span class="fontawesome-user"></span>
+ 
+        <input type="text" name="dni" placeholder="Dni" />
         <input type="text" name="name" placeholder="Nombre" />
-
-        <span class="fontawesome-user"></span>
         <input type="text" name="apellidos" placeholder="Apellidos" />
-
-        <span class="fontawesome-user"></span>
-        <input type="text" name="email" placeholder="Correo" />
-
-        <span class="fontawesome-user"></span>
+        <input type="email" name="email" placeholder="Correo" />
         <input type="text" name="edad" placeholder="Edad" />
-
-        <span class="fontawesome-user"></span>
         <input type="text" name="direccion" placeholder="Direccion" />
 
-        <span class="fontawesome-user"></span>
         <select name="tipo">
-            <option value="" selected>Seleccionar tipo</option>
-            <option value="A">Administrador</option>
-            <option value="U">Usuario</option>
+        <option value="" selected>Seleccionar tipo</option>
+        <option value="A">Administrador</option>
+        <option value="U">Usuario</option>
         </select>
 
-        <span class="fontawesome-user"></span>
         <input type="text" name="username" placeholder="Nombre Usuario" />
-
-        <span class="fontawesome-user"></span>
         <input type="password" name="password" placeholder="Password" />
-
-        <input type="submit" value="Registrarse" />
+        <input class=""type="submit" value="Registrarse" />
 
     </form>
-    </body>
 
-</html>
+</body>
