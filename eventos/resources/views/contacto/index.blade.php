@@ -1,36 +1,38 @@
 @extends('layouts.master')
 
 <!--Contacta me-->
-<div class="container" id="contacttitulo">
-	<div class="row">
-		<div class="col-sm-4">
-			<h3 style="color: #D68910;">Contactanos!</h3>
-			<hr>
-			<address>
-			<strong>Email:</strong> <a href="mailto:#"> gg52@alu.ua.es</a><br><br>
-			<strong>Teléfono:</strong> 900600600
-			</address>
-</div>
-    
-<div class="col-sm-8 contact-form">
-	<form id="contact" method="post" class="form" role="form">
+<form action="{{route('correo')}}" enctype="multipart/form-data" method="post" class="form" role="form">
+	{{csrf_field()}}
+
+	<div class="container" id="contacttitulo">
 		<div class="row">
-			<div class="col-xs-6 col-md-6 form-group">
-				<input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required autofocus />
+			<div class="col-sm-4">
+				<h3 style="color: #D68910;">Contactanos!</h3>
+				<hr>
+				<address>
+				<strong>Email:</strong> <a href="mailto:#"> gg52@alu.ua.es</a><br><br>
+				<strong>Teléfono:</strong> 900600600
+				</address>
+	</div>
+		
+	<div class="col-sm-8 contact-form">
+			<div class="row">
+				<div class="col-xs-6 col-md-6 form-group">
+					<input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required autofocus />
+				</div>
+				<div class="col-xs-6 col-md-6 form-group">
+					<input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+				</div>
 			</div>
-			<div class="col-xs-6 col-md-6 form-group">
-				<input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+		<textarea class="form-control" id="message" name="message" placeholder="Mensaje" rows="5"></textarea>
+		<br />
+			<div class="row">
+				<div class="col-xs-12 col-md-12 form-group">
+					<button class="btn btn-warning pull-right" type="submit">Enviar</button>
+		
 			</div>
-		</div>
-	<textarea class="form-control" id="message" name="message" placeholder="Mensaje" rows="5"></textarea>
-	<br />
-		<div class="row">
-			<div class="col-xs-12 col-md-12 form-group">
-				<button class="btn btn-warning pull-right" type="submit">Enviar</button>
-	
-		</div>
-	</form>
-</div>
+	</div>
+</form>
 
 
 	

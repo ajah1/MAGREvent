@@ -79,3 +79,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::post('correo', [
+    "as" => "correo",
+    "uses" => "ContactosController@correo"
+]);
+
