@@ -18,7 +18,7 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active">
-				<a class="nav-link" href="/#works"><i class="fa fa-image"></i> Eventos <span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="/#work"><i class="fa fa-image"></i> Eventos <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="/#team"><i class="fa fa-user"></i> Equipo</a>
@@ -32,11 +32,49 @@
 			<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
 		</form>
 		<ul class="navbar-nav mr-right">
+			
 			<li class="nav-item active">
-				<a class="nav-link" href="detalle.html"><i class="fa fa-user" aria-hidden="true"> Sign in</i></a>
-			</li>
-			<li class="nav-item active">
-				<a class="nav-link" href="#home"><i class="fa fa-sign-out" aria-hidden="true"> Sign out</i></a>
+				<!--a class="nav-link" href="{{ route('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"> Sign out</i></a-->
+        <!-- Right Side Of Navbar -->
+        <ul class="nav navbar-nav navbar-right">
+          <!-- Authentication Links -->
+          @guest
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-user" aria-hidden="true"> Sign in</i></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ route('register') }}">Register</a>
+          </li>
+          @else
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+                      {{ Auth::user()->name }} <span class="caret"></span>
+                  </a>
+
+                  <ul class="dropdown-menu">
+                      <li>
+                        <div>
+                       
+                          <a href="{{ route('home') }}">
+                              Ver Perfil
+                          </a>
+                          </div>
+
+                          <div>
+                          <a href="{{ route('logout') }}"
+                              onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                              Logout
+                          </a>
+                          </div>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                              {{ csrf_field() }}
+                          </form>
+                      </li>
+                  </ul>
+              </li>
+          @endguest
+      </ul>
 			</li>
 		</ul>
 	</div>

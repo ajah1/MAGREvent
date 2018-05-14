@@ -55,6 +55,7 @@
                   <ul class="dropdown-menu">
                       <li>
                         <div>
+                       
                           <a href="{{ route('home') }}">
                               Ver Perfil
                           </a>

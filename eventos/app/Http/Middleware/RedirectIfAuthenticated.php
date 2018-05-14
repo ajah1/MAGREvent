@@ -18,9 +18,16 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+            $correo = Auth::user()->email();
+            //$tipo = DB::table('users')->select('tipo')->where('email',$correo)->first();
+            $tipo = DB::table('users')->select('name')->where('email',$correo);
+            if($tipo == "admin"){
+                return redirect('/admin');
+            }
+            else{
+                return redirect('/buscar');
+            }
         }
-
         return $next($request);
     }
 }
