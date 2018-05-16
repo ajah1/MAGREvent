@@ -27,7 +27,7 @@ Route::get('/buscar', function () {
 
 
 // Mostrar toda la informacion
-Route::get('usuarios', 'UsuariosController@index');
+Route::get('usuarios', ["as" => "listarUsers", "uses" => "UsuariosController@listarUsuario"]);
 Route::get('eventos', 'EventosController@index');
 Route::get('reservas', 'ReservasController@index');
 Route::get('entradas', 'EntradasController@index');

@@ -9,7 +9,7 @@
 <div margin-top:100px;>
     <body>
     <div class="background"></div>
-    <div class="body-wrapper">
+    <div class="body-wrapper container">
         <div class="panel">
         <div class="aside">
             <div class="avatar"><img src="https://66.media.tumblr.com/avatar_faa95867d2b3_128.png"/></div>
@@ -34,7 +34,7 @@
             </div>
             <div class="seperator"></div>
             <div class="item">
-                <a>    
+                <a href="{{route('listarUsers')}}">    
                     LISTAR USUARIOS
                 </a>
             </div>

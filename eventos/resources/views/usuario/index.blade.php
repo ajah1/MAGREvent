@@ -1,33 +1,61 @@
+<!DOCTYPE html>
 @extends('layouts.master')
+<head>
+    {!!Html::style('css/admin.css')!!}
+    {!!Html::style('css/usuario.css')!!}
+    {!!Html::style('css/createUsuario.css')!!}
+    {!!Html::style('css/menu.css')!!}
+</head>
 
-@section('title')
-    Listado Usuarios
-@endsection
+<div margin-top:100px;>
+    <body>
+    <div class="background"></div>
+    <div class="body-wrapper container">
+        <div class="panel">
+        <div class="aside">
+            <div class="avatar"><img src="https://66.media.tumblr.com/avatar_faa95867d2b3_128.png"/></div>
+            <div class="seperator"></div>
+            <div class="list">
+            <div class="item">
+                <a href="{{ route('home') }}">
+                    PERFIL
+                </a>
+            </div>
+            <div class="seperator"></div>
+            <div class="item">
+                <a href="{{route('crearEvento')}}">    
+                    CREAR EVENTO
+                </a>
+            </div>
+            <div class="seperator"></div>
+            <div class="item">
+                <a href="{{route('crearEntrada')}}">    
+                    CREAR ENTRADA
+                </a>
+            </div>
+            <div class="seperator"></div>
+            <div class="item selected">
+                <a href="{{route('listarUsers')}}">    
+                    LISTAR USUARIOS
+                </a>
+            </div>
+            <div class="seperator"></div>
+            </div>
+            <div class="log-out">
+                <a href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+            </div>
+        </div>
+        <div class="view">
+            <div class="sub-title">PANEL DEL ADMINISTRADOR</div>
+            <div class="main-title">LISTA DE USUARIOS</div>
+            <div class="seperator"></div>
+            <div class="table-title">
 
-@section('content')
-
-<link rel="stylesheet" type="text/css" href="css/usuario.css">
-
-<div class="table-title">
-<h3>Tabla Usuarios</h3>
-
-{!!Form::open(['route' => ['buscarUsuario'],'method' => 'POST'])!!}
-</div>
-
-    {!!Form::select('tipo',['id' => 'Id','dni' => 'Dni','name' => 'Nombre',
-    'apellidos' => 'Apellidos','email' => 'Email','edad' => 'Edad','direccion' => 'Direccion',
-    'tipo' => 'Tipo','username' => 'Username'], null,['placeholder' => 'Filtro'])!!}
-
-    <input type="search" name="buscar" id="buscar" method="POST">
-
-    {!!Form::select('orden',['asc' => 'Ascendentemente','desc' => 'Descendentemente'], null,['placeholder' => 'Orden'])!!}
-
-<button class="menus">
-    <a href="{{ route('buscarUsuario') }}">Buscar<span aria-hidden="true"></span></a>
-</button>
-{!!Form::close()!!}
-
-<table class="table-fill">
+<table class="table-fill" style="margin: 0 auto; float:left">
 
 <thead>
     <tr>
@@ -60,8 +88,6 @@
         <td class="text-left">{{$user->username}}</td>
         <td class="text-left">{{$user->password}}</td>
         <td>
-            <a href="{{ route('usuario.edit', $user->id) }}" class="btn btn-warning">Editar<span aria-hidden="true"></span></a>
-
             <form action="{{ route('usuario.destroy', $user->id) }}" method="POST">
             {{ csrf_field() }}
             <input type="hidden" name="_method" value="DELETE">
@@ -74,11 +100,14 @@
     @endforeach
 
 </table>
-
-<div class="paguinacion"
-    {!!$users->render()!!}
+            
+            <div class="clear-fix"></div>
+            </div>
+            
+            </div>
+        </div>
+        <div class="clear-fix"></div>
+        </div>
+    </div>
+    </body>
 </div>
-
-@endsection
-
-
