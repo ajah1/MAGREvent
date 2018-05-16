@@ -77,9 +77,19 @@ Route::get('comprar', [
     "uses" => "PagosController@index"
 ]);
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@authenticated')->name('home');
 
 Route::get('admin', [
     "as" => "admin",
     "uses" => "HomeController@admin"
+]);
+
+Route::get('crearEvento', [
+    "as" => "crearEvento",
+    "uses" => "EventosController@newEvento"
+]);
+
+Route::get('crearEntrada', [
+    "as" => "crearEntrada",
+    "uses" => "EntradasController@newEntrada"
 ]);
