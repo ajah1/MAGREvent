@@ -72,7 +72,7 @@
 		</div> <!-- col.// -->
 	</div> <!-- row.// -->
 	<hr>
-	<a href="pago.html" class="btn btn-lg btn-warning text-uppercase"> <i class="fa fa-credit-card"></i> Comprar </a>
+	<a href="{{ route('comprar') }}" class="btn btn-lg btn-warning text-uppercase"> <i class="fa fa-credit-card"></i> Comprar </a>
 	</article> <!-- card-body.// -->
 		</aside> <!-- col.// -->
 	</div> <!-- row.// -->

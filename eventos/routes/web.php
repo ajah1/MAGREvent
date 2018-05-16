@@ -12,7 +12,7 @@
 */
 Route::get('/', 'EventosController@index');
 
-Route::get('/home', 'EventosController@index')->middleware('miFiltro');
+Route::get('/home', 'EventosController@index');
 
 
 

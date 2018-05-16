@@ -42,15 +42,15 @@ class UsuariosController extends Controller
 
     public function edit($id) {
 
-        $user = User::find($id);
+        $user = Usuario::find($id);
 
         return view('usuario.edit', compact('user'));
 
     }
 
-    public function update(UsuarioModifyRequest $request, $id) {
+    public function update(UsuarioModifyRequest $request, $email) {
 
-        $user = User::find($id);
+        $user = Usuario::find($email);
 
         $user->fill($request->all());
         $user->save();
