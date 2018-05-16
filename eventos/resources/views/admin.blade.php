@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 @extends('layouts.master')
+
+
 <link href="css/admin.css" rel="stylesheet" type="text/css">
 
 <div class="container" margin-top:100px;>

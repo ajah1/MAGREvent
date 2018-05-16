@@ -1,5 +1,6 @@
 @extends('layouts.master')
-<link href="css/producto.css" rel="stylesheet" type="text/css">
+{!!Html::style('css/producto.css')!!}
+
 <!--Producto-->
 <div class="container">
 

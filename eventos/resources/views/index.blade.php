@@ -123,7 +123,7 @@
 			</div>
 			
 			<div class="actions-wrapper">
-			  <a href="{{ route('verProducto') }}" class="add-btn wishlist" >Ver</a>
+			  <a href="{{ route('verProducto', $evento->id) }}" class="add-btn wishlist" >Ver</a>
 			  <a href="{{ route('comprar') }}" class="add-btn cart">Comprar</a>
 			</div>
 		</li>

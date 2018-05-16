@@ -64,7 +64,7 @@ Route::get('contactos', [
 ]);
 
 // Ver producto
-Route::get('productos', [
+Route::get('/productos/{id}', [
     "as" => "verProducto",
     "uses" => "ProductosController@index"
 ]);
