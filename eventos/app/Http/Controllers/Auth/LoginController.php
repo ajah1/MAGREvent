@@ -42,7 +42,7 @@ class LoginController extends Controller
             return redirect('/admin');
         }
         else{
-            return redirect('/home');
+            return view('home');
         }
     }
 }

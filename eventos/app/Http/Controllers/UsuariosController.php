@@ -14,7 +14,7 @@ class UsuariosController extends Controller
     public function index() {
 
         $users = Usuario::paginate(2);
-        return view('home');
+        return view('/usuario');
     }
 
     public function create() {

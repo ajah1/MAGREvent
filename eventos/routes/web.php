@@ -12,9 +12,7 @@
 */
 Route::get('/', 'EventosController@index');
 
-Route::get('/home', 'EventosController@index');
-
-
+//Route::get('/home', 'EventosController@index');
 
 Route::get('/404', function () {
     return view('404');
