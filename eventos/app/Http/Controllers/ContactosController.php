@@ -25,9 +25,9 @@ class ContactosController extends Controller
         $data['email'] = "magrevent@gmail.com";
 
         Mail::send('email.contacto', ['data' => $data], function($mail) use($data){
-
-            $mail->subject('Contacta con nosotros');
-            $mail->to($data['email'], $data['name']);
+            
+            $mail->from($data['correo'],$data['name']);
+            $mail->to($data['email'])->subject('Contacta con nosotros');
         });
 
         return Redirect::to('/');
