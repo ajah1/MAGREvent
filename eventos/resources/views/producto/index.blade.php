@@ -2,7 +2,6 @@
 {!!Html::style('css/producto.css')!!}
 
 <!--Producto-->
-@foreach($eventos as $evento)
 <div class="container">
 
 <div class="card">
@@ -10,35 +9,28 @@
 		<aside class="col-sm-5 border-right">
 <article class="gallery-wrap"> 
 <div class="img-big-wrap">
-  <div> <a href="#"><img src="img/busta.jpg"></a></div>
+  <div> <a href="#"><img src="../imagenes/<?php echo $eventos->imagen ?>"></a></div>
 </div> <!-- slider-product.// -->
-<div class="img-small-wrap">
-
-  <div class="item-gallery"> <img src="img/m5.jpg" class="img-fluid"> </div>
-  <div class="item-gallery"> <img src="img/sabina.jpg" class="img-fluid"> </div>
-  <div class="item-gallery"> <img src="img/viña.jpg" class="img-fluid"> </div>
-</div> <!-- slider-nav.// -->
 </article> <!-- gallery-wrap .end// -->
 		</aside>
 		<aside class="col-sm-7">
 		
 <article class="card-body p-5">
 
-	<h3 class="title mb-3">{{$valor}}</h3>
+	<h3 class="title mb-3"><?php echo $eventos->nombre ?></h3>
 
 <p class="price-detail-wrap"> 
 	<span class="price h3 text-warning"> 
-		<span class="num">Precio: 60</span><span class="currency">€</span>
-	</span> 
-	<span>/por persona</span> 
+		<span class="num">Fecha: </span>
+	</span>
 </p> <!-- price-detail-wrap .// -->
 <dl class="item-property">
   <dt>Descripción</dt>
-  <dd><p>"Vivir", una balada romántica compuesta por los compositores españoles Rafa Vergara y Pablo Manresa junto a la compositora colombiana Vicky Echeverri</p></dd>
+  <dd><p></p></dd>
 </dl>
 <dl class="param param-feature">
   <dt>#Código#</dt>
-  <dd>12345611</dd>
+  <dd></dd>
 </dl>  <!-- item-property-hor .// -->
 
 <hr>
