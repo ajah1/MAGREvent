@@ -89,8 +89,8 @@ class UsuariosController extends Controller
         return Redirect::to('/usuario');
     }
     public function listarUsuario(){
-        $users = Usuario::all();
-        return view('/usuario/index',compact('users'));
+        $users = User::all();
+        return view('usuario.index',compact('users'));
         
     }
 }
