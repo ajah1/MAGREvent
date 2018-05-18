@@ -1,3 +1,5 @@
+<link href="{{asset('css/createUsuario.css')}}" rel="stylesheet">
+
 @if(count($errors) > 0)
     <div class="error-msg">
 

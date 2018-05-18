@@ -11,7 +11,9 @@
 |
 */
 
+
 Route::get('/', 'EventosController@index');
+Route::get('/home', 'EventosController@index');
 
 Route::get('/404', function () {
     return view('404');
@@ -21,9 +23,7 @@ Route::get('/buscar', function () {
     return view('buscar');
 });
 
-Route::get('/home', function () {
-    return view('index');
-});
+/* Route::get('/home', function () {return view('index');}); */
 
 // Mostrar toda la informacion
 Route::get('usuarios', 'UsuariosController@index');
@@ -75,9 +75,10 @@ Route::get('comprar', [
     "as" => "comprar",
     "uses" => "PagosController@index"
 ]);
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('correo', [
     "as" => "correo",
