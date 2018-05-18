@@ -10,7 +10,7 @@
 				<h3 style="color: #D68910;">Contactanos!</h3>
 				<hr>
 				<address>
-				<strong>Email:</strong> <a href="mailto:#"> gg52@alu.ua.es</a><br><br>
+				<strong>Nombre:</strong> <a href="mailto:#"> Alvaro</a><br><br>
 				<strong>Teléfono:</strong> 900600600
 				</address>
 	</div>
@@ -18,10 +18,10 @@
 	<div class="col-sm-8 contact-form">
 			<div class="row">
 				<div class="col-xs-6 col-md-6 form-group">
-					<input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required autofocus />
+					<input class="form-control" id="name" name="name" placeholder="Asunto" type="text" required autofocus />
 				</div>
 				<div class="col-xs-6 col-md-6 form-group">
-					<input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+					<input text="magrevent@gmail.com" class="form-control" id="email" name="email" placeholder="Email" type="email" required />
 				</div>
 			</div>
 		<textarea class="form-control" id="message" name="message" placeholder="Mensaje" rows="5"></textarea>

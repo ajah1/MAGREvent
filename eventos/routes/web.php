@@ -95,3 +95,13 @@ Route::get('crearEntrada', [
     "as" => "crearEntrada",
     "uses" => "EntradasController@newEntrada"
 ]);
+
+Route::post('correo', [
+    "as" => "correo",
+    "uses" => "ContactosController@correo"
+]);
+
+Route::post('comprarProducto', [
+    "as" => "comprarProducto",
+    "uses" => "PagosController@correo"
+]);
