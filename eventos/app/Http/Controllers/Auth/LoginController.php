@@ -36,4 +36,13 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function authenticated($user){
+        if($user->email == "admin@admin.com"){
+            return redirect('/admin');
+        }
+        else{
+            return view('home');
+        }
+    }
 }

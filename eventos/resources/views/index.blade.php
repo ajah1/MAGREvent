@@ -54,13 +54,20 @@
 
                   <ul class="dropdown-menu">
                       <li>
-                          
+                        <div>
+                       
+                          <a href="{{ route('home') }}">
+                              Ver Perfil
+                          </a>
+                          </div>
+
+                          <div>
                           <a href="{{ route('logout') }}"
                               onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                               Logout
                           </a>
-
+                          </div>
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                               {{ csrf_field() }}
                           </form>
@@ -116,7 +123,7 @@
 			</div>
 			
 			<div class="actions-wrapper">
-			  <a href="{{ route('verProducto') }}" class="add-btn wishlist" >Ver</a>
+			  <a href="{{ route('verProducto', $evento->id) }}" class="add-btn wishlist" >Ver</a>
 			  <a href="{{ route('comprar') }}" class="add-btn cart">Comprar</a>
 			</div>
 		</li>

@@ -1,6 +1,8 @@
 @extends('layouts.master')
-<link href="css/producto.css" rel="stylesheet" type="text/css">
+{!!Html::style('css/producto.css')!!}
+
 <!--Producto-->
+@foreach($eventos as $evento)
 <div class="container">
 
 <div class="card">
@@ -11,7 +13,7 @@
   <div> <a href="#"><img src="img/busta.jpg"></a></div>
 </div> <!-- slider-product.// -->
 <div class="img-small-wrap">
-  <div class="item-gallery"> <img src="img/busta.jpg" class="img-fluid"> </div>
+
   <div class="item-gallery"> <img src="img/m5.jpg" class="img-fluid"> </div>
   <div class="item-gallery"> <img src="img/sabina.jpg" class="img-fluid"> </div>
   <div class="item-gallery"> <img src="img/viña.jpg" class="img-fluid"> </div>
@@ -19,8 +21,10 @@
 </article> <!-- gallery-wrap .end// -->
 		</aside>
 		<aside class="col-sm-7">
+		
 <article class="card-body p-5">
-	<h3 class="title mb-3">Bustamente Vivir</h3>
+
+	<h3 class="title mb-3">{{$valor}}</h3>
 
 <p class="price-detail-wrap"> 
 	<span class="price h3 text-warning"> 
@@ -72,7 +76,7 @@
 		</div> <!-- col.// -->
 	</div> <!-- row.// -->
 	<hr>
-	<a href="pago.html" class="btn btn-lg btn-warning text-uppercase"> <i class="fa fa-credit-card"></i> Comprar </a>
+	<a href="{{ route('comprar') }}" class="btn btn-lg btn-warning text-uppercase"> <i class="fa fa-credit-card"></i> Comprar </a>
 	</article> <!-- card-body.// -->
 		</aside> <!-- col.// -->
 	</div> <!-- row.// -->

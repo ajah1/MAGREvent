@@ -33,7 +33,7 @@ class EntradasController extends Controller
             'informacion' => $request['informacion'],
         ]);
 
-        return Redirect::to('/entrada');
+        return Redirect::to('home');
     }
 
     public function edit($id) {
@@ -78,5 +78,9 @@ class EntradasController extends Controller
         $entrada->delete();
 
         return Redirect::to('/entrada');
+    }
+
+    public function newEntrada(){
+        return Redirect::to('entrada/create');
     }
 }

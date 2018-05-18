@@ -14,6 +14,7 @@ class EventosController extends Controller
     public function index() {
 
         $eventos = Evento::all();
+       
         return view('index',compact('eventos'));
     }
 
@@ -36,7 +37,7 @@ class EventosController extends Controller
             'imagen' => $request['imagen']->store('')
         ]);
 
-        return Redirect::to('/evento');
+        return Redirect::to('home');
 
     }
 
@@ -83,4 +84,9 @@ class EventosController extends Controller
 
         return Redirect::to('/evento');
     }
+
+    public function newEvento(){
+        return Redirect::to('evento/create');
+    }
+
 }
