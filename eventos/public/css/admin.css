@@ -26,7 +26,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 10px 50px 5px rgba(0, 0, 0, 0.1);
     z-index: 8;
-    overflow: hidden;
+    overflow-x: auto;
   }
   .body-wrapper .panel .aside {
     width: 83px;
@@ -44,7 +44,7 @@ body {
     background-color: white;
     margin: auto;
     margin-top: 20px;
-    overflow: hidden;
+    overflow-x: auto;
     transition: all 0.3s cubic-bezier(0.38, -0.9, 0.5, 2.5);
   }
   .body-wrapper .panel .aside .avatar:hover {
@@ -274,4 +274,3 @@ body {
   body {
     -webkit-tap-highlight-color: #FFF498;
   }
-  
