@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\UsuarioCreateRequest;
 use App\Http\Requests\UsuarioModifyRequest;
-use App\Usuario;
+use App\User;
 use Redirect;
 use DB;
 
