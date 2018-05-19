@@ -147,7 +147,7 @@
           <p class="w3-opacity">Diseñador Web</p>
           <p>gg52@alu.ua.es</p>
           <p>
-          <a href="{{ route('contactanos') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a></p>
+          <a href="{{ route('contactanosA') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a></p>
         </div>
       </div>
     </div>
@@ -159,7 +159,7 @@
           <p class="w3-opacity">Programador</p>
           <p>Descripción.</p>
           <p>
-          <a href="{{ route('contactanos') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
+          <a href="{{ route('contactanosJ') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
           </p>
         </div>
       </div>
@@ -172,7 +172,7 @@
           <p class="w3-opacity">Diseñador Web</p>
           <p>Descripción.</p>
           <p>
-          <a href="{{ route('contactanos') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
+          <a href="{{ route('contactanosAl') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
           </p>
         </div>
       </div>
@@ -185,7 +185,7 @@
           <p class="w3-opacity">Programador</p>
           <p>Descripción.</p>
           <p>
-          <a href="{{ route('contactanos') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
+          <a href="{{ route('contactanosJu') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
           </p>
         </div>
       </div>
