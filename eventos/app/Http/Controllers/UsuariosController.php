@@ -42,7 +42,7 @@ class UsuariosController extends Controller
 
     public function edit($id) {
 
-        $user = Usuario::find($id);
+        $user = User::find($id);
 
         return view('usuario.edit', compact('user'));
 
@@ -89,8 +89,8 @@ class UsuariosController extends Controller
         return Redirect::to('/usuario');
     }
     public function listarUsuario(){
-        $users = Usuario::all();
-        return view('/usuario/index',compact('users'));
+        $users = User::all();
+        return view('usuario.index',compact('users'));
         
     }
 }

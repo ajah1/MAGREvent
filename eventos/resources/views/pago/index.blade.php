@@ -1,5 +1,6 @@
 @extends('layouts.master')
- <link href="css/pago.css" rel="stylesheet" type="text/css">
+{!!Html::style('css/pago.css')!!}
+ 
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
 
 

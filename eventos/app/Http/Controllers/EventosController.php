@@ -33,7 +33,7 @@ class EventosController extends Controller
             'nombre' => $request['nombre'],
             'fecha_inicio' => $request['fecha_inicio'],
             'fecha_fin' => $request['fecha_fin'],
-            'direccion' => $request['direccion'],
+            'descripcion' => $request['descripcion'],
             'imagen' => $request['imagen']->store('')
         ]);
 

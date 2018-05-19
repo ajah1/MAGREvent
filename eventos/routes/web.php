@@ -71,7 +71,7 @@ Route::get('/productos/{id}', [
 ]);
 
 // Comprar
-Route::get('comprar', [
+Route::get('/comprar/{id_evento}/{id_cliente}', [
     "as" => "comprar",
     "uses" => "PagosController@index"
 ]);

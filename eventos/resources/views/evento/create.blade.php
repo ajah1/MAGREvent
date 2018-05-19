@@ -69,7 +69,7 @@
                 <input type="text" name="fecha_fin" placeholder="Fecha final" />
 
                 <span class="fontawesome-user"></span>
-                <input type="text" name="direccion" placeholder="Direccion" />
+                <input type="text" name="descripcion" placeholder="Descripcion" />
 
                 <span class="fontawesome-user"></span>
                 <input type="file" name="imagen" />

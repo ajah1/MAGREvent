@@ -50,18 +50,9 @@
             <div class="sub-title">PANEL DEL ADMINISTRADOR</div>
             <div class="main-title">BIENVENIDO {{ Auth::user()->name }}</div>
             <div class="seperator"></div>
-            
-            
             <div class="clear-fix"></div>
-            </div>
-            <div class="min-seperator"></div>
+        </div>
             
-            
-                <div class="change">CHANGE</div>
-                <div class="clear-fix"></div>
-                </div>
-                <div class="clear-fix"></div>
-            </div>
             </div>
         </div>
         <div class="clear-fix"></div>

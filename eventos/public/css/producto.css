@@ -49,4 +49,11 @@ body, html {
     cursor: zoom-in;
 }
 
+#precio{
+    position: relative;
+    width: 100%;
+}
+
+
+
 
