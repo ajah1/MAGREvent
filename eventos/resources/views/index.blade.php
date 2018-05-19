@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+
 <title>MAGREvent</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
  <link href="css/proyecto.css" rel="stylesheet" type="text/css">
  <link href="css/cssgrande.css" rel="stylesheet" type="text/css">
- <script type="text/javascript" src="js/mapa.js"></script>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
@@ -310,6 +309,44 @@ poniendo especial énfasis en la creación de diseños robustos y flexibles medi
     <i class="fa fa-linkedin w3-hover-opacity" style="color: #D68910;"></i>
   </div>
 </footer>
+<script>
+
+		var map,
+    points_data = [
+      {'title': 'MAGREvent', 'pos': {lat: 38.3856636, lng: -0.5132717}},
+      {'title': '05', 'pos': {lat: 35.65325, lng: 139.6935}}
+    ];
+
+function addMarker(d) {
+  var infowindow_contents = "<div class='info_inner'>" + d.title + "</div>"
+  var infowindow = new google.maps.InfoWindow({
+    content: infowindow_contents
+  });
+  var marker = new google.maps.Marker({
+    position: d.pos,
+    map: map,
+    title: d.title
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+}
+
+function initialize() {
+  var mapOptions = {
+    zoom: 17,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    center: {lat: 38.3856636, lng: -0.5132717}
+  };
+  map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  for (var i = 0; i < points_data.length; i++) {
+    addMarker(points_data[i]);
+  }
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
