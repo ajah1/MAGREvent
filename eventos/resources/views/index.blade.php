@@ -123,7 +123,7 @@
 			
 			<div class="actions-wrapper">
 			  <a href="{{ route('verProducto', $evento->id) }}" class="add-btn wishlist" >Ver</a>
-			  <a href="{{ route('comprar', [$evento->id, Auth::user()->id ]) }}" class="add-btn cart">Comprar</a>
+			  <a href="{{ route('comprar', $evento->id) }}" class="add-btn cart">Comprar</a>
 			</div>
 		</li>
 		</ul>

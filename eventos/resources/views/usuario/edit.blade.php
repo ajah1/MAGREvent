@@ -2,7 +2,7 @@
 @extends('layouts.master')
 
 <head>
-    {!!Html::style('css/admin.css')!!}
+    {!!Html::style('css/user.css')!!}
     {!!Html::style('css/createUsuario.css')!!}
     {!!Html::style('css/menu.css')!!}
 </head>
@@ -77,12 +77,6 @@
             <div class="clear-fix"></div>
             </div>
             <div class="min-seperator"></div>
-            
-            
-                <div class="change">CHANGE</div>
-                <div class="clear-fix"></div>
-                </div>
-                <div class="clear-fix"></div>
             </div>
             </div>
         </div>

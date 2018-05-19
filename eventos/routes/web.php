@@ -27,7 +27,7 @@ Route::get('/buscar', function () {
 
 // Mostrar toda la informacion
 Route::get('usuarios', ["as" => "listarUsers", "uses" => "UsuariosController@listarUsuario"]);
-Route::get('eventos', 'EventosController@index');
+Route::get('eventos', ["as" => "listarEventos", "uses" => "EventosController@listarEventos"]);
 Route::get('reservas', 'ReservasController@index');
 Route::get('entradas', 'EntradasController@index');
 Route::get('tipos', 'TiposController@index');
@@ -71,7 +71,7 @@ Route::get('/productos/{id}', [
 ]);
 
 // Comprar
-Route::get('/comprar/{id_evento}/{id_cliente}', [
+Route::get('/comprar/{id_evento}', [
     "as" => "comprar",
     "uses" => "PagosController@index"
 ]);

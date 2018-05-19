@@ -12,10 +12,12 @@ use Redirect;
 class PagosController extends Controller
 {
     
-    public function index($id_evento,$id_cliente) {
-
+    public function index($id_evento) {
+        $id_cliente = null;
         $contador = DB::table('reservas')->count();
-        //dd($id_cliente);
+        if(Auth::user()){
+            $id_cliente = Auth::user()->id;
+        }
         if($id_evento != null && $id_cliente != null){
             \App\Reserva::create([
 

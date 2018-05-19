@@ -1,69 +1,83 @@
+<!DOCTYPE html>
 @extends('layouts.master')
 
-@section('title')
-    Listado Eventos
-@endsection
+<head>
+    {!!Html::style('css/user.css')!!}
+    {!!Html::style('css/createUsuario.css')!!}
+    {!!Html::style('css/menu.css')!!}
+</head>
 
-@section('content')
-<div class="table-title">
-<h3>Tabla Eventos</h3>
-{!!Form::open(['route' => ['buscarEvento'],'method' => 'POST'])!!}
+<div margin-top:100px;>
+    <body>
+    <div class="background"></div>
+    <div class="body-wrapper">
+        <div class="panel">
+        <div class="aside">
+            <div class="avatar"><img src="https://66.media.tumblr.com/avatar_faa95867d2b3_128.png"/></div>
+            <div class="seperator"></div>
+            <div class="list">
+            <div class="item">
+                <a href="{{ route('home') }}">
+                    PERFIL
+                </a>    
+            </div>
+            <div class="seperator"></div>
+            <div class="item">
+                <a href="{{ route('usuario.edit', Auth::user()->email ) }}">    
+                    MODIFICAR DATOS
+                </a>
+            </div>
+            <div class="seperator"></div>
+            <div class="item selected">
+                <a>    
+                    SIGUIENTES EVENTOS
+                </a>
+            </div>
+            <div class="seperator"></div>
+            </div>
+            <div class="log-out">
+                <a href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+            </div>
+        </div>
+        <div class="view">
+            <div class="sub-title">PANEL DEL USUARIO</div>
+            <div class="main-title">MODIFICAR DATOS PERSONALES</div>
+            <div class="seperator"></div>
+            <table class="table table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                    <th class="text-left">Id</th>
+                    <th class="text-left">Nombre</th>
+                    <th class="text-left">Fecha inicio</th>
+                    <th class="text-left">Fecha fin</th>
+                    </tr>
+                </thead>
+
+                    @foreach ($eventos as $evento)
+
+                    <tbody class="table-hover">
+                    <tr>
+                    <td class="text-left">{{$evento->id}}</td>
+                    <td class="text-left">{{$evento->nombre}}</td>
+                    <td class="text-left">{{$evento->fecha_inicio}}</td>
+                    <td class="text-left">{{$evento->fecha_fin}}</td>
+                    </tr>
+                    </tbody>
+                    @endforeach
+            </table>
+            
+            <div class="clear-fix"></div>
+            </div>
+            <div class="min-seperator"></div>
+            </div>
+            </div>
+        </div>
+        <div class="clear-fix"></div>
+        </div>
+    </div>
+    </body>
 </div>
-
-    {!!Form::select('tipo',['id' => 'Id','nombre' => 'Nombre','fecha_inicio' => 'Fecha inicio', 
-    'fecha_fin' => 'Fecha fin', 'direccion' => 'Direccion'], null,['placeholder' => 'Filtro'])!!}
-
-    <input type="search" name="buscar" id="buscar" method="POST">
-
-    {!!Form::select('orden',['asc' => 'Ascendentemente','desc' => 'Descendentemente'], null,['placeholder' => 'Orden'])!!}
-
-<button class="menus">
-    <a href="{{ route('buscarEvento') }}">Buscar<span aria-hidden="true"></span></a>
-</button>
-{!!Form::close()!!}
-
-<link rel="stylesheet" type="text/css" href="css/opcional.css">
-
-<table class="table-fill">
-
-<thead>
-    <tr>
-    <th class="text-left">Id</th>
-    <th class="text-left">Nombre</th>
-    <th class="text-left">Fecha inicio</th>
-    <th class="text-left">Fecha fin</th>
-    <th class="text-left">Direccion</th>
-    <th class="text-left">Imagen</th>
-    <th class="text-left">Editar</th>
-
-    </tr>
-</thead>
-
-    @foreach ($eventos as $evento)
-
-    <tbody class="table-hover">
-    <tr>
-    <td class="text-left">{{$evento->id}}</td>
-    <td class="text-left">{{$evento->nombre}}</td>
-    <td class="text-left">{{$evento->fecha_inicio}}</td>
-    <td class="text-left">{{$evento->fecha_fin}}</td>
-    <td class="text-left">{{$evento->direccion}}</td>
-    <td class="text-left"><img width="108px" src="imagenes/{{$evento->imagen}}"></td>
-    <td>
-        <a href="{{ route('evento.edit', $evento->id) }}" class="btn btn-warning">Modificar<span aria-hidden="true"></span></a>
-
-        <form action="{{ route('evento.destroy', $evento->id) }}" method="POST">
-            {{ csrf_field() }}
-            <input type="hidden" name="_method" value="DELETE">
-            <button class="btn btn-link">Eliminar</button>
-        </form>
-    </td>
-    </tr>
-    </tbody>
-    @endforeach
-</table>
-
-<div class="paguinacion"
-    {!!$eventos->render()!!}
-</div>
-@endsection

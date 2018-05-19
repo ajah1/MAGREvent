@@ -20,7 +20,7 @@ class CreateReservasTable extends Migration
             $table->string('descripcion');
             $table->string('cod_barras');
             $table->foreign('id_cliente')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('id_evento')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_evento')->references('id')->on('eventos')->onDelete('cascade')->onUpdate('cascade');
             $table->primary(['id_cliente','id_evento','id']);
             $table->timestamps();
         });
