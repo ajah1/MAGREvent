@@ -10,12 +10,36 @@ use Redirect;
 class ContactosController extends Controller
 {
     
-    public function index() {
+    public function indexA() {
 
         // En un futur sols filtrar els admins que serem els membres del grupo
         // Email,telefono
-        $users = Usuario::all();
-        return view('contacto.index',compact('users'));
+        $usuario = "Alvaro";
+        return view('contacto.index')->with('usuario',$usuario);
+    }
+
+    public function indexJ() {
+
+        // En un futur sols filtrar els admins que serem els membres del grupo
+        // Email,telefono
+        $usuario = "Javier";
+        return view('contacto.index')->with('usuario',$usuario);
+    }
+
+    public function indexJu() {
+
+        // En un futur sols filtrar els admins que serem els membres del grupo
+        // Email,telefono
+        $usuario = "Juan";
+        return view('contacto.index')->with('usuario',$usuario);
+    }
+
+    public function indexAl() {
+
+        // En un futur sols filtrar els admins que serem els membres del grupo
+        // Email,telefono
+        $usuario = "Alejandro";
+        return view('contacto.index')->with('usuario',$usuario);
     }
 
     public function correo(Request $request) {

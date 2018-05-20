@@ -10,7 +10,7 @@
 				<h3 style="color: #D68910;">Contáctanos!</h3>
 				<hr>
 				<address>
-				<strong>Correo para:</strong> <a href="mailto:#"> Personal Magrevent</a><br><br>
+				<strong>Correo para:</strong> <a href="mailto:#"> <?php echo $usuario ?></a><br><br>
 				<strong>Teléfono:</strong> 900600600
 				</address>
 	</div>
@@ -22,11 +22,11 @@
 				</div>
 				@if(Auth::User())
 				<div class="col-xs-6 col-md-6 form-group">
-					<input text="magrevent@gmail.com" class="form-control" id="email" name="email" placeholder="{{Auth::User()->email}}" type="email" required />
+				<input value="{{Auth::User()->email}}" class="form-control" id="email" name="email" placeholder="{{Auth::User()->email}}" required />
 				</div>
 				@else
 				<div class="col-xs-6 col-md-6 form-group">
-					<input text="magrevent@gmail.com" class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+				<input value="Email" class="form-control" id="email" name="email" placeholder="Email" required />
 				</div>
 				@endif
 			</div>

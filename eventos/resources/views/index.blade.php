@@ -147,6 +147,8 @@
           <p class="w3-opacity">Diseñador Web</p>
           <p>gg52@alu.ua.es</p>
           <p>
+          <a href="{{ route('contactanosA') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a></p>
+          </p>
         </div>
       </div>
     </div>
@@ -157,6 +159,9 @@
           <h3>Javier Monllor Alcaraz</h3>
           <p class="w3-opacity">Programador</p>
           <p>jma86@alu.ua.es</p>
+          <p>
+          <a href="{{ route('contactanosJ') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
+          </p>
         </div>
       </div>
     </div>
@@ -167,6 +172,9 @@
           <h3>Alejandro Aliaga Hyder</h3>
           <p class="w3-opacity">Diseñador Web</p>
           <p>Descripción.</p>
+          <p>
+          <a href="{{ route('contactanosAl') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
+          </p>
         </div>
       </div>
     </div>
@@ -177,13 +185,13 @@
           <h3>Juan Ruiz de Larrea Aracil</h3>
           <p class="w3-opacity">Programador</p>
           <p>jrl12@alu.ua.es</p>
+          <p>
+          <a href="{{ route('contactanosJu') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
+          </p>
         </div>
       </div>
     </div>
   </div>
-  <p>
-  <a href="{{ route('contactanos') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
-  </p>
 </div>
 
 

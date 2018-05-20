@@ -59,10 +59,26 @@ Route::post('nuevoEvento', [
 ]);
 
 // Contactos
-Route::get('contactos', [
-    "as" => "contactanos",
-    "uses" => "ContactosController@index"
+Route::get('contactosA', [
+    "as" => "contactanosA",
+    "uses" => "ContactosController@indexA"
 ]);
+
+Route::get('contactosJ', [
+    "as" => "contactanosJ",
+    "uses" => "ContactosController@indexJ"
+]);
+
+Route::get('contactosJu', [
+    "as" => "contactanosJu",
+    "uses" => "ContactosController@indexJu"
+]);
+
+Route::get('contactosAl', [
+    "as" => "contactanosAl",
+    "uses" => "ContactosController@indexAl"
+]);
+
 
 // Ver producto
 Route::get('/productos/{id}', [
