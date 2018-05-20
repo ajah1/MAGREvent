@@ -17,14 +17,17 @@
 		
 	<div class="col-sm-8 contact-form">
 			<div class="row">
-				<div class="col-xs-6 col-md-6 form-group">
-					<input class="form-control" id="name" name="name" placeholder="Asunto" type="text" required autofocus />
-				</div>
 				@if(Auth::User())
+				<div class="col-xs-6 col-md-6 form-group">
+					<input class="form-control" id="name" name="name" placeholder="{{Auth::User()->username}}" type="text" required autofocus />
+				</div>
 				<div class="col-xs-6 col-md-6 form-group">
 				<input value="{{Auth::User()->email}}" class="form-control" id="email" name="email" placeholder="{{Auth::User()->email}}" required />
 				</div>
 				@else
+				<div class="col-xs-6 col-md-6 form-group">
+					<input class="form-control" id="name" name="name" placeholder="Username" type="text" required autofocus />
+				</div>
 				<div class="col-xs-6 col-md-6 form-group">
 				<input value="Email" class="form-control" id="email" name="email" placeholder="Email" required />
 				</div>
