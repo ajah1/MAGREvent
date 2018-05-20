@@ -79,6 +79,22 @@ Route::get('contactosAl', [
     "uses" => "ContactosController@indexAl"
 ]);
 
+Route::get('contactosJ', [
+    "as" => "contactanosJ",
+    "uses" => "ContactosController@indexJ"
+]);
+
+Route::get('contactosJu', [
+    "as" => "contactanosJu",
+    "uses" => "ContactosController@indexJu"
+]);
+
+Route::get('contactosAl', [
+    "as" => "contactanosAl",
+    "uses" => "ContactosController@indexAl"
+]);
+
+
 // Ver producto
 Route::get('/productos/{id}', [
     "as" => "verProducto",
@@ -119,4 +135,9 @@ Route::post('correo', [
 Route::post('comprarProducto', [
     "as" => "comprarProducto",
     "uses" => "PagosController@correo"
+]);
+
+Route::delete('/borrarUsuario/{id_usuario}', [
+    "as" => "borrarUsuario",
+    "uses" => "UsuariosController@destroy"
 ]);

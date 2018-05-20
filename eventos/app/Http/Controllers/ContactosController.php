@@ -10,6 +10,10 @@ use DB;
 
 class ContactosController extends Controller
 {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> RamaJuanJuan
     public function indexA() {
 
         // En un futur sols filtrar els admins que serem els membres del grupo

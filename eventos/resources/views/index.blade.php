@@ -157,7 +157,7 @@
         <div class="w3-container">
           <h3>Javier Monllor Alcaraz</h3>
           <p class="w3-opacity">Programador</p>
-          <p>Descripción.</p>
+          <p>jma86@alu.ua.es</p>
           <p>
           <a href="{{ route('contactanosJ') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
           </p>
@@ -179,11 +179,11 @@
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Dan" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Dan" style="width:100%">
         <div class="w3-container">
           <h3>Juan Ruiz de Larrea Aracil</h3>
           <p class="w3-opacity">Programador</p>
-          <p>Descripción.</p>
+          <p>jrl12@alu.ua.es</p>
           <p>
           <a href="{{ route('contactanosJu') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
           </p>
@@ -191,8 +191,6 @@
       </div>
     </div>
   </div>
-  <p>
-  </p>
 </div>
 
 
