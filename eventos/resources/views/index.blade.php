@@ -143,11 +143,10 @@
       <div class="w3-card">
         <img src="https://www.w3schools.com/w3images/team3.jpg" alt="John" style="width:100%">
         <div class="w3-container">
-          <h3>Álvaro Gironés</h3>
+          <h3>Álvaro Gironés García</h3>
           <p class="w3-opacity">Diseñador Web</p>
           <p>gg52@alu.ua.es</p>
           <p>
-          <a href="{{ route('contactanos') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a></p>
         </div>
       </div>
     </div>
@@ -155,12 +154,9 @@
       <div class="w3-card">
         <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Jane" style="width:100%">
         <div class="w3-container">
-          <h3>Javier Monllor</h3>
+          <h3>Javier Monllor Alcaraz</h3>
           <p class="w3-opacity">Programador</p>
-          <p>Descripción.</p>
-          <p>
-          <a href="{{ route('contactanos') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
-          </p>
+          <p>jma86@alu.ua.es</p>
         </div>
       </div>
     </div>
@@ -168,12 +164,9 @@
       <div class="w3-card">
         <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Mike" style="width:100%">
         <div class="w3-container">
-          <h3>Alejandro Aliaga</h3>
+          <h3>Alejandro Aliaga Hyder</h3>
           <p class="w3-opacity">Diseñador Web</p>
           <p>Descripción.</p>
-          <p>
-          <a href="{{ route('contactanos') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
-          </p>
         </div>
       </div>
     </div>
@@ -181,16 +174,16 @@
       <div class="w3-card">
         <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Dan" style="width:100%">
         <div class="w3-container">
-          <h3>Juan Ruiz</h3>
+          <h3>Juan Ruiz de Larrea Aracil</h3>
           <p class="w3-opacity">Programador</p>
-          <p>Descripción.</p>
-          <p>
-          <a href="{{ route('contactanos') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
-          </p>
+          <p>jrl12@alu.ua.es</p>
         </div>
       </div>
     </div>
   </div>
+  <p>
+  <a href="{{ route('contactanos') }}" class="w3-button w3-yellow w3-block"><i class="fa fa-envelope"></i> Contactar</a>
+  </p>
 </div>
 
 

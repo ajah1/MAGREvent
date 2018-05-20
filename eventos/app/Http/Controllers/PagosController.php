@@ -39,11 +39,15 @@ class PagosController extends Controller
     }
 
     public function correo(Request $request) {
+        $user_mail = null;
+        if(Auth::user()){
+            $user_mail = Auth::user()->email;
+        }
 
         $data['name'] = $request['username'];
         $data['numero'] = $request['cardNumber'];
         $data['correo'] = "magrevent@gmail.com";
-        $data['envio'] = "javimonlloralcaraz@gmail.com";
+        $data['envio'] = $user_mail;
 
         Mail::send('email.pago', ['data' => $data], function($mail) use($data){
             

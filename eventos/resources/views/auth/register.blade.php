@@ -5,7 +5,7 @@
 
 #menu {
     position:fixed;
-    left:30%;
+    left:40%;
     width:40%;
     top:24%;
     height: 600px;

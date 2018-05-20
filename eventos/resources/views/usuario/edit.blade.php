@@ -29,7 +29,7 @@
             </div>
             <div class="seperator"></div>
             <div class="item">
-                <a>    
+                <a href="{{ route('listarEventos') }}">    
                     SIGUIENTES EVENTOS
                 </a>
             </div>

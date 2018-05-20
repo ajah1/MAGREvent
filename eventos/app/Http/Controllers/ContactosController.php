@@ -9,6 +9,7 @@ use Redirect;
 
 class ContactosController extends Controller
 {
+    
     public function index() {
 
         // En un futur sols filtrar els admins que serem els membres del grupo
