@@ -7,7 +7,7 @@
 	<div class="container" id="contacttitulo">
 		<div class="row">
 			<div class="col-sm-4">
-				<h3 style="color: #D68910;">Contactanos!</h3>
+				<h3 style="color: #D68910;">Contáctanos!</h3>
 				<hr>
 				<address>
 				<strong>Nombre:</strong> <a href="mailto:#"><?php echo $usuario ?></a><br><br>
@@ -20,9 +20,15 @@
 				<div class="col-xs-6 col-md-6 form-group">
 					<input class="form-control" id="name" name="name" placeholder="Asunto" type="text" required autofocus />
 				</div>
+				@if(Auth::User())
+				<div class="col-xs-6 col-md-6 form-group">
+					<input text="magrevent@gmail.com" class="form-control" id="email" name="email" placeholder="{{Auth::User()->email}}" type="email" required />
+				</div>
+				@else
 				<div class="col-xs-6 col-md-6 form-group">
 					<input value="<?php echo $usuario ?>" class="form-control" id="email" name="email" placeholder="Email" required />
 				</div>
+				@endif
 			</div>
 		<textarea class="form-control" id="message" name="message" placeholder="Mensaje" rows="5"></textarea>
 		<br />
