@@ -10,7 +10,7 @@
 				<h3 style="color: #D68910;">Contactanos!</h3>
 				<hr>
 				<address>
-				<strong>Nombre:</strong> <a href="mailto:#"> Alvaro</a><br><br>
+				<strong>Nombre:</strong> <a href="mailto:#"><?php echo $usuario ?></a><br><br>
 				<strong>Teléfono:</strong> 900600600
 				</address>
 	</div>
@@ -21,7 +21,7 @@
 					<input class="form-control" id="name" name="name" placeholder="Asunto" type="text" required autofocus />
 				</div>
 				<div class="col-xs-6 col-md-6 form-group">
-					<input text="magrevent@gmail.com" class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+					<input value="<?php echo $usuario ?>" class="form-control" id="email" name="email" placeholder="Email" required />
 				</div>
 			</div>
 		<textarea class="form-control" id="message" name="message" placeholder="Mensaje" rows="5"></textarea>

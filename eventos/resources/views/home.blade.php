@@ -24,7 +24,7 @@
             </div>
             <div class="seperator"></div>
             <div class="item">
-                <a>    
+                <a href="{{ route('listarEventos') }}">    
                     SIGUIENTES EVENTOS
                 </a>
             </div>
@@ -47,12 +47,6 @@
             <div class="clear-fix"></div>
             </div>
             <div class="min-seperator"></div>
-            
-            
-                <div class="change">CHANGE</div>
-                <div class="clear-fix"></div>
-                </div>
-                <div class="clear-fix"></div>
             </div>
             </div>
         </div>

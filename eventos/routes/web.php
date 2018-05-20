@@ -27,7 +27,7 @@ Route::get('/buscar', function () {
 
 // Mostrar toda la informacion
 Route::get('usuarios', ["as" => "listarUsers", "uses" => "UsuariosController@listarUsuario"]);
-Route::get('eventos', 'EventosController@index');
+Route::get('eventos', ["as" => "listarEventos", "uses" => "EventosController@listarEventos"]);
 Route::get('reservas', 'ReservasController@index');
 Route::get('entradas', 'EntradasController@index');
 Route::get('tipos', 'TiposController@index');
@@ -59,9 +59,24 @@ Route::post('nuevoEvento', [
 ]);
 
 // Contactos
-Route::get('contactos', [
-    "as" => "contactanos",
-    "uses" => "ContactosController@index"
+Route::get('contactosA', [
+    "as" => "contactanosA",
+    "uses" => "ContactosController@indexA"
+]);
+
+Route::get('contactosJ', [
+    "as" => "contactanosJ",
+    "uses" => "ContactosController@indexJ"
+]);
+
+Route::get('contactosJu', [
+    "as" => "contactanosJu",
+    "uses" => "ContactosController@indexJu"
+]);
+
+Route::get('contactosAl', [
+    "as" => "contactanosAl",
+    "uses" => "ContactosController@indexAl"
 ]);
 
 // Ver producto
@@ -71,7 +86,7 @@ Route::get('/productos/{id}', [
 ]);
 
 // Comprar
-Route::get('comprar', [
+Route::get('/comprar/{id_evento}', [
     "as" => "comprar",
     "uses" => "PagosController@index"
 ]);

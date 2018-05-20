@@ -8,6 +8,7 @@ use Redirect;
 use App\Http\Requests\EventoCreateRequest;
 use App\Http\Requests\EventoModifyRequest;
 use DB;
+use Auth;
 
 class EventosController extends Controller
 {
@@ -33,7 +34,7 @@ class EventosController extends Controller
             'nombre' => $request['nombre'],
             'fecha_inicio' => $request['fecha_inicio'],
             'fecha_fin' => $request['fecha_fin'],
-            'direccion' => $request['direccion'],
+            'descripcion' => $request['descripcion'],
             'imagen' => $request['imagen']->store('')
         ]);
 
@@ -87,6 +88,18 @@ class EventosController extends Controller
 
     public function newEvento(){
         return Redirect::to('evento/create');
+    }
+    public function listarEventos(){
+        $id_cliente = null;
+        if(Auth::User()){
+            $id_cliente = Auth::User()->id;
+        }
+        $eventos = DB::table('reservas')->join('eventos','eventos.id','=','reservas.id_evento')
+        ->select('eventos.id', 'eventos.nombre', 'eventos.fecha_inicio', 'eventos.fecha_fin' )->where('reservas.id_cliente',$id_cliente)->get();
+       
+        //dd($reservas);
+        return view('evento.index',compact('eventos'));
+        
     }
 
 }
