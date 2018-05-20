@@ -121,3 +121,8 @@ Route::post('comprarProducto', [
     "as" => "comprarProducto",
     "uses" => "PagosController@correo"
 ]);
+
+Route::delete('/borrarUsuario/{id_usuario}', [
+    "as" => "borrarUsuario",
+    "uses" => "UsuariosController@destroy"
+]);

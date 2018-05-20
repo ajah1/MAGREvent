@@ -7,10 +7,8 @@
     position:fixed;
     left:40%;
     width:40%;
-    top:24%;
+    top:9%;
     height: 600px;
-    overflow:scroll;
-    scrollbar-face-color:red;
 }
 </style>
 
@@ -102,20 +100,6 @@
                                 @if ($errors->has('direccion'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('direccion') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('tipo') ? ' has-error' : '' }}">
-                            <label for="tipo" class="col-md-4 control-label">Tipo</label>
-
-                            <div class="col-md-6">
-                                <input id="tipo" type="text" class="form-control" name="tipo" value="{{ old('tipo') }}" required autofocus>
-
-                                @if ($errors->has('tipo'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('tipo') }}</strong>
                                     </span>
                                 @endif
                             </div>

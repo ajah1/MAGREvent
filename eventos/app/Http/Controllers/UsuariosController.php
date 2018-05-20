@@ -13,7 +13,7 @@ class UsuariosController extends Controller
 {
     public function index() {
 
-        $users = Usuario::paginate(2);
+        $users = User::paginate(2);
         return view('/usuario');
     }
 
@@ -82,11 +82,12 @@ class UsuariosController extends Controller
 
     public function destroy($id) {
 
-        $user = Usuario::find($id);
+        $user = User::find($id);
+        //dd($user);
 
         $user->delete();
 
-        return Redirect::to('/usuario');
+        return view('/admin');
     }
     public function listarUsuario(){
         $users = User::all();

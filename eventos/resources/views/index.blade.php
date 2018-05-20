@@ -180,7 +180,7 @@
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Dan" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Dan" style="width:100%">
         <div class="w3-container">
           <h3>Juan Ruiz de Larrea Aracil</h3>
           <p class="w3-opacity">Programador</p>
