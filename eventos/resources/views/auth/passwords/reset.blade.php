@@ -1,6 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
-@section('content')
+<link href="css/contacto.css" rel="stylesheet" type="text/css">
+<style> 
+#menu {
+    width: 100%;
+    margin-top: 20%;
+    margin-left: 50%;
+}
+</style>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -67,4 +74,4 @@
         </div>
     </div>
 </div>
-@endsection
+

@@ -86,11 +86,10 @@ integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6J
                 <td>{{$user->username}}</td>
                 <td>{{$user->password}}</td>
                 <td>
-                    <form action="{{ route('borrarUsuario', $user->id) }}" method="DELETE">
-                    {{ csrf_field() }}
+                {!!Form::open(['route' => ['borrarUsuario', $user->id], 'method' => 'DELETE'])!!}
                     <input type="hidden" name="_method" value="DELETE">
                     <button class="btn btn-danger">Eliminar</button>
-                    </form>
+                {!!Form::close()!!}
                 </td>
             </tr>
         @endforeach

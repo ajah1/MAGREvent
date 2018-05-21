@@ -87,7 +87,7 @@ class UsuariosController extends Controller
 
         $user->delete();
 
-        return view('/admin');
+        return Redirect::to('/admin');
     }
     public function listarUsuario(){
         $users = User::all();

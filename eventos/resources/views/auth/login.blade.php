@@ -1,7 +1,7 @@
 
 @extends('layouts.master')
 
- <link href="css/contacto.css" rel="stylesheet" type="text/css">
+<link href="css/contacto.css" rel="stylesheet" type="text/css">
 <style> 
 #menu {
     width: 100%;
